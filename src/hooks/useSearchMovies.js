@@ -10,6 +10,6 @@ export const useSearchMovies = (query) => {
   return useQuery({
     queryKey: ['search', debouncedQuery],
     queryFn: () => searchMovies(debouncedQuery),
-    enabled: !!debouncedQuery, // solo ejecuta si hay texto
+    enabled: !!debouncedQuery, // only run the query if debouncedQuery is not empty
   });
 };
