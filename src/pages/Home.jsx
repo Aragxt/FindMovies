@@ -18,7 +18,7 @@ const requests = {
 
 export default function Home() {
   return (
-    <section Classname = "px-4">
+    <section className = "px-4">
       <SearchBar />
 
       <MovieRow title="Trending Now" fetchUrl={requests.trending} />
