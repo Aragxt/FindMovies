@@ -21,14 +21,14 @@ const requests = {
 
 export default function Home() {
   return (
-    <Layout>
+    <section>
       <SearchBar />
 
 
       <MovieRow title="Trending Now" fetchUrl={requests.trending} />
-      <MovieRow title="Top Rated" fetchUrl={requests.topRated} />
       <MovieRow title="Upcoming" fetchUrl={requests.upcoming} />
+      <MovieRow title="Top Rated" fetchUrl={requests.topRated} />
       <MovieRow title="Now Playing" fetchUrl={requests.nowPlaying} />
-    </Layout>
+    </section>
   );
 }

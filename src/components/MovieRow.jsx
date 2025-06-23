@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function MovieRow({ title, fetchUrl }) {
   const scrollRef = useRef(null);
@@ -40,7 +41,11 @@ export default function MovieRow({ title, fetchUrl }) {
       >
         {data?.pages.map((page) =>
           page.results.map((movie) => (
-            <div key={movie.id} className="min-w-[150px]">
+            <Link
+              to={`/movie/${movie.id}`}
+              key={movie.id}
+              className="min-w-[150px] block hover:scale-105 transition-transform"
+            >
               <img
                 src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                 alt={movie.title}
@@ -48,7 +53,7 @@ export default function MovieRow({ title, fetchUrl }) {
               />
               <p className="text-white mt-1 text-sm truncate">{movie.title}</p>
               <p className="text-gray-400 text-xs">{movie.vote_average}</p>
-            </div>
+            </Link>
           ))
         )}
       </div>
