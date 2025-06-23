@@ -4,7 +4,8 @@
 import SearchBar from '../components/Barsearch';
 import MovieRow from '../components/MovieRow';
 import Header from '../components/Header';
-import logo from '../assets/logo.svg';
+import Layout from '../components/Layout';
+
 
 
 const API_KEY = import.meta.env.VITE_API_KEY;
@@ -20,10 +21,7 @@ const requests = {
 
 export default function Home() {
   return (
-    <section className = "px-4 mt-4">
-
-      <Header />
-
+    <Layout>
       <SearchBar />
 
 
@@ -31,6 +29,6 @@ export default function Home() {
       <MovieRow title="Top Rated" fetchUrl={requests.topRated} />
       <MovieRow title="Upcoming" fetchUrl={requests.upcoming} />
       <MovieRow title="Now Playing" fetchUrl={requests.nowPlaying} />
-    </section>
+    </Layout>
   );
 }

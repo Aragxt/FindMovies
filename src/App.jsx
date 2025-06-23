@@ -9,8 +9,8 @@ import Home from './pages/Home';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <main className="w-full bg-black text-white min-h-screen">
       <Home />
-    </div>
+    </main>
   );
 }
