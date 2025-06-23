@@ -41,7 +41,7 @@ export default function SearchBar() {
         {error && <p>Error al buscar: {error.message}</p>}
 
         {data?.results?.length > 0 && (
-          <ul className="absolute z-10 mt-2 bg-gray-800 rounded-lg p-4 space-y-4 max-h-80 overflow-y-auto w-full shadow-lg">
+          <ul className="absolute z-10 mt-2 bg-gray-800 rounded-lg p-4 space-y-4 max-h-80 overflow-y-auto w-full shadow-lg scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent">
             {data.results.map((movie) => (
               <li key={movie.id} className="flex items-start space-x-4">
                 <img

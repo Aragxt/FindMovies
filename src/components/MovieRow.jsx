@@ -36,7 +36,7 @@ export default function MovieRow({ title, fetchUrl }) {
       <div
         ref={scrollRef}
         onScroll={handleScroll}
-        className="flex overflow-x-auto space-x-4 scrollbar-hide px-2"
+        className="flex overflow-x-auto space-x-4 px-2 scrollbar-thin scrollbar-thumb-transparent scrollbar-track-transparent"
       >
         {data?.pages.map((page) =>
           page.results.map((movie) => (
