@@ -32,7 +32,7 @@ export default function MovieRow({ title, fetchUrl }) {
 
   return (
     <div className="my-8">
-      <h2 className="text-yellow-400 text-xl font-bold mb-2">{title}</h2>
+      <h2 className="text-red-400 text-xl font-bold mb-2">{title}</h2>
       <div
         ref={scrollRef}
         onScroll={handleScroll}
